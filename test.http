@@ -1,0 +1,60 @@
+### Publikus karakterek lekérése
+GET http://localhost:3300/api/characters
+
+### Hello Kitty lekérése
+GET http://localhost:3300/api/characters/Kitty White
+
+### Felhasználó regisztráció
+POST http://localhost:3300/api/users
+Content-Type: application/json
+
+{
+    "username": "user1",
+    "email": "user@example.com",
+    "password": "titok123"
+}
+
+### Login
+POST http://localhost:3300/api/users/login
+Content-Type: application/json
+
+{
+    "email": "user@example.com",
+    "password": "titok123"
+}
+
+### Saját karakterek lekérése
+GET http://localhost:3300/api/users/characters/1
+
+### Saját karakterek lekérése
+GET http://localhost:3300/api/users/characters/1
+
+### Új karakter hozzáadása
+POST http://localhost:3300/api/users/characters
+Content-Type: application/json
+
+{
+    "name": "My Sweet Piano",
+    "real_name": "Piano",
+    "birthday": "07-06",
+    "species": "Sheep",
+    "gender": "Female",
+    "breed": "Sheep",
+    "isPublic": 0,
+    "userId": 1
+}
+### Karakter módosítása
+PUT http://localhost:3300/api/users/characters/1/Piano
+Content-Type: application/json
+
+{
+    "name": "My Sweet Piano",
+    "birthday": "07-06",
+    "species": "Sheep",
+    "gender": "Female",
+    "breed": "Sheep",
+    "isPublic": 1
+}
+
+### Karakter törlése
+DELETE http://localhost:3300/api/users/characters/1/Piano
