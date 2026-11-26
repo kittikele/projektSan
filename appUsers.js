@@ -2,7 +2,7 @@ import bcrypt from "bcrypt";
 import express from "express";
 import * as db from "./data/dbUsers.js";
 import * as characterdb from "./data/dbCharacters.js";
-
+//menü, tünjön el a szöveg egy idő után, regisztráció után jelentkezzen be egyből, placeholder kép ideiglenesen
 const router = express.Router();
 
 // Új felhasználó hozzáadása
